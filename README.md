@@ -271,3 +271,5 @@ first we must run our personal Ethereum blockchain ganache-cli which we can use 
 ```shell
 ganache-cli --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize -e 1000000000
 ```
+after this commande on our shell we have our test blockchain
+<p align="center"><img src="./img/ganache-cli.png"></p>  
