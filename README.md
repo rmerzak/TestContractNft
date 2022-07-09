@@ -136,10 +136,10 @@ we need to note that in this case, the word “upgradable” doesn't mean mutabl
 The UUPS proxy pattern is similar to the transparent proxy pattern --A proxy with a built in admin and upgrade interface--, except the upgrade is triggered via the logic contract rather than from the proxy contract.
 so this function initialise our contract to be upgradable.
 
-```solidity
+```solidity  
 mapping(string => uint256) eventBadgeIdStore;
-    uint256 private badgeIdCounter;
-    string[] public eventStore;
+uint256 private badgeIdCounter;
+string[] public eventStore;
 ```
 
 
