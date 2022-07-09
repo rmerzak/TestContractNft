@@ -221,6 +221,22 @@ this function returns an array of STring for all the event Stored in our Smart c
     }
 ```
 
+this function take a event name and address of an acount on our smart contract and return the balance of this address of the event name.
+if the **account != address(0)** it throw an error if not it use _balanceOf(account, badgeId)_ to return the balance of the account for that badgeId.
+
+```solidity
+function _beforeTokenTransfer(
+        address operator,
+        address from,
+        address to,
+        uint256[] memory ids,
+        uint256[] memory amounts,
+        bytes memory data
+        )internal override(ERC1155Upgradeable, ERC1155SupplyUpgradeable) whenNotPaused
+    {
+        super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
+    }
+```
 
 
 
