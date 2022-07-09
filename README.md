@@ -193,12 +193,12 @@ the purpose for this function is to mint an event Badge if those condition are f
 
 ```solidity
 function addNewEvents(string[] memory events) external onlyOwner {
-			for (uint256 i = 0; i < events.length; i++) {
-            require(eventBadgeIdStore[events[i]] == 0, "Event is already exists");
-            eventBadgeIdStore[events[i]] = ++badgeIdCounter;
-            eventStore.push(events[i]);
-        }
-    }
+for (uint256 i = 0; i < events.length; i++) {
+	require(eventBadgeIdStore[events[i]] == 0, "Event is already exists");
+	eventBadgeIdStore[events[i]] = ++badgeIdCounter;
+	eventStore.push(events[i]);
+}
+}
 ```
 
 
