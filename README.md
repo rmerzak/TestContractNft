@@ -90,6 +90,7 @@ contract TestContract is
     UUPSUpgradeable
 ```
 TestContract use all those contract and inherit from them some of there functions in the purpose of securing and writing a good optimized smart contract.
+
 ```solidity
 function initialize() public initializer {
         __ERC1155_init("");
@@ -101,7 +102,12 @@ function initialize() public initializer {
     }
 ```
 
-this function is an initializer that can 
+this function is an initializer because in the upgradeable smart contract we use init function instead of constructor.  
+the constructor is executed when the smart contrqct instance is deployed.but in the proxy-based upgradeability system, it would never happen.that why we use _initializer_. to do so we import contract
+```
+import "../node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+```
+
 
 
 
