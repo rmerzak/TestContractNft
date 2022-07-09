@@ -127,12 +127,20 @@ this function allow to users to burn there token
 ```
 __ERC1155Supply_init()
 ```
-
-
+to initialise our contract to keep track of totalSupply for ERC1155 tokens
 ```
 __UUPSUpgradeable_init()
 ```
+first what is UUPS proxy pattern:
+we need to note that in this case, the word “upgradable” doesn't mean mutable.
+The UUPS proxy pattern is similar to the transparent proxy pattern --A proxy with a built in admin and upgrade interface--, except the upgrade is triggered via the logic contract rather than from the proxy contract.
+so this function initialise our contract to be upgradable.
 
+```solidity
+	mapping(string => uint256) eventBadgeIdStore;
+    uint256 private badgeIdCounter;
+    string[] public eventStore;
+```
 
 
 
