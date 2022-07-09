@@ -284,3 +284,5 @@ then
 truffle migrate
 ```
 <p align="center"><img src="./img/truffleMigrate.png"></p> 
+
+to deploy this smart contract we need **0.10840382 ETH**
