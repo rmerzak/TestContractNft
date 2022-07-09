@@ -242,32 +242,19 @@ Sometimes, in order to extend a parent contract we will need to override multipl
 Hooks are simply functions that are called before or after some action takes place. They provide a centralized point to hook into and extend the original behavior.
 
 _beforeTokenTransfer_
-this function take 6 arguments three address operator, from and to and 2 uint256[] the ids and amounts  
+this function take 6 arguments three address operator, from and to and 2 uint256[] the ids and amounts also data type of bytes.
 
+we overrided the function in a sub-contract and modifie functionality on our need. This way there's no need to modify the original contract.
 
+Hooks allow us lots of flexibility in modifying the behaviour of a token by allowing us to execute functionality, in this case of the _beforeTokenTransfer_ hook, we can execute functionality before the token is transferred and when in not paused.
 
+```solidity
+function _authorizeUpgrade(address newImplementation)
+        internal
+        override
+        onlyOwner
+    {}
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+this function is for autorize the new upgrade for our new smart contract we just need to give it the address of the new implementation.
 
