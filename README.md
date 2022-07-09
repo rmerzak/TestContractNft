@@ -201,6 +201,26 @@ for (uint256 i = 0; i < events.length; i++) {
 }
 ```
 
+this function aims to add a new Event in our smart contract it is external and only the owner can execute the function. it takes an array of memory events if the event is already exist it throw an error if not it push it on the blockchain.
+
+```solidity
+function getAllEvents() external view returns (string[] memory) {
+        return eventStore;
+    }
+```
+
+this function returns an array of STring for all the event Stored in our Smart contract.
+```solidity
+ function balanceOfEventBadgeToken(
+        string calldata eventName,
+        address account
+    ) external view returns (uint256) {
+ require(account != address(0), "address is invalid");
+ uint256 badgeId = eventBadgeIdStore[eventName];
+ return balanceOf(account, badgeId);
+    }
+```
+
 
 
 
