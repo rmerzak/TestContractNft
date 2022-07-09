@@ -237,7 +237,12 @@ function _beforeTokenTransfer(
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 ```
+**Hooks:***
+Sometimes, in order to extend a parent contract we will need to override multiple related functions, which leads to code duplication and increased likelihood of bugs.
+Hooks are simply functions that are called before or after some action takes place. They provide a centralized point to hook into and extend the original behavior.
 
+_beforeTokenTransfer_
+this function take 6 arguments three address operator, from and to and 2 uint256[] the ids and amounts  
 
 
 
