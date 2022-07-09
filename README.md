@@ -273,3 +273,14 @@ ganache-cli --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize -e 10000000
 ```
 after this commande on our shell we have our test blockchain
 <p align="center"><img src="./img/ganache-cli.png"></p>  
+
+we must now compile and migrate our contract using truffle:
+```shell
+truffle compile
+```
+
+then
+```shell
+truffle migrate
+```
+<p align="center"><img src="./img/truffleMigrate.png"></p> 
