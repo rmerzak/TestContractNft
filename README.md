@@ -103,11 +103,35 @@ function initialize() public initializer {
 ```
 
 this function is an initializer because in the upgradeable smart contract we use init function instead of constructor.  
-the constructor is executed when the smart contrqct instance is deployed.but in the proxy-based upgradeability system, it would never happen.that why we use _initializer_. to do so we import contract
-```
+the constructor is executed when the smart contrqct instance is deployed.but in the proxy-based upgradeability system, it would never happen.that why we use _initializer_. to do so we import contract rom OpenZeppelin Upgrades:
+```solidity
 import "../node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 ```
 
+```solidity
+__ERC1155_init("")
+```
+this function aim to set the URI of the ERC1155 init.
+```solidity
+__Ownable_init()
+```
+this line aim to initialize the owner of the contract
+```solidity
+__Pausable_init()
+```
+this function allows children to implement an emergency stop mechanism that can be triggered by an authorized account.
+```
+__ERC1155Burnable_init();
+```
+this function allow to users to burn there token 
+```
+__ERC1155Supply_init()
+```
+
+
+```
+__UUPSUpgradeable_init()
+```
 
 
 
