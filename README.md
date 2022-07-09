@@ -143,7 +143,7 @@ string[] public eventStore;
 ```
 **Mapping**
 Mapping is a reference type as arrays and structs. used to store the data in the form of key-value pairs, a key can be any of the built-in data types but reference types are not allowed while the value can be of any type. Mappings are mostly used to associate the unique Ethereum address with the associated value type.
-```
+```solidity
 mapping(key => value) <access specifier> <name>;
 ```
 in our first variable _eventBadgeIdStore_ a Mapping variable of all the stored event Badge ID where the key is a String and the value is a uint256.
@@ -154,7 +154,7 @@ the second variable is a counter for every created Badge in our contract his vis
 
 lastly we have an arrays of Strings where we have all the event stored in our contract.
 
-```
+```solidity
 function setURI(string memory newuri) public onlyOwner {
         _setURI(newuri);
         }
@@ -171,7 +171,7 @@ the first function _setURI(string memory newuri)_ is for set token URI which poi
 the second function _pause()_ is called by a pauser to pause, triggers stopped state.
 but the last one _unpause()_ is called by a pauser to unpause, returns to normal state.
 
-```
+```solidity
 function mintEventBadgeAndTransfer(
         string calldata eventName,
         address attendee,
