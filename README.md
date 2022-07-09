@@ -120,15 +120,15 @@ this line aim to initialize the owner of the contract
 __Pausable_init()
 ```
 this function allows children to implement an emergency stop mechanism that can be triggered by an authorized account.
-```
+```solidity
 __ERC1155Burnable_init();
 ```
 this function allow to users to burn there token 
-```
+```solidity
 __ERC1155Supply_init()
 ```
 to initialise our contract to keep track of totalSupply for ERC1155 tokens
-```
+```solidity
 __UUPSUpgradeable_init()
 ```
 first what is UUPS proxy pattern:
@@ -184,6 +184,17 @@ bytes memory tokenData = (bytes(eventData));
 _mint(attendee, eventBadgeId, 1, tokenData);
 }
 ```
+**calldata**
+special data location that contains the function arguments, only available for external function call parameters.
+
+_mintEventBadgeAndTransfer_ take 3 argument the first one is string calldata eventName, the second one is an address attendee and the last one is a string for the event data. this function is external that meant to be called by other contracts. They cannot be used for internal call.
+
+the purpose for this function is to mint an event Badge if those condition are false **attendee != address(0)** or **eventBadgeIdStore[eventName] > 0** require will throw an error, the rest of the code will not be executed.
+
+
+
+
+
 
 
 
