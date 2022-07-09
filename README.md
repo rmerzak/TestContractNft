@@ -167,8 +167,23 @@ function unpause() public onlyOwner {
 ```
 
 in those function we use the onlyOwner modifier that makes a function revert if not called by the address registered as the owner. Once you deploy this contract only you or someone that you designate can add new members to the list within. That's it, in a nutshell.
-the first function _setURI_ is for set token URI which points to metadata about that specific token.
-the second function  
+the first function _setURI(string memory newuri)_ is for set token URI which points to metadata about that specific token.
+the second function _pause()_ is called by a pauser to pause, triggers stopped state.
+but the last one _unpause()_ is called by a pauser to unpause, returns to normal state.
+
+```
+function mintEventBadgeAndTransfer(
+        string calldata eventName,
+        address attendee,
+        string calldata eventData
+) external onlyOwner {
+require(attendee != address(0), "ERC1155: mint to the zero address");
+require(eventBadgeIdStore[eventName] > 0, "Invalid event or event not exists to mint badges");
+uint256 eventBadgeId = eventBadgeIdStore[eventName];
+bytes memory tokenData = (bytes(eventData));
+_mint(attendee, eventBadgeId, 1, tokenData);
+}
+```
 
 
 
