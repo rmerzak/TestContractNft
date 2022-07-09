@@ -141,6 +141,35 @@ mapping(string => uint256) eventBadgeIdStore;
 uint256 private badgeIdCounter;
 string[] public eventStore;
 ```
+**Mapping**
+Mapping is a reference type as arrays and structs. used to store the data in the form of key-value pairs, a key can be any of the built-in data types but reference types are not allowed while the value can be of any type. Mappings are mostly used to associate the unique Ethereum address with the associated value type.
+```
+mapping(key => value) <access specifier> <name>;
+```
+in our first variable _eventBadgeIdStore_ a Mapping variable of all the stored event Badge ID where the key is a String and the value is a uint256.
+so for every string there is an ID type uint256.
+
+
+the second variable is a counter for every created Badge in our contract his visibilte is Private where we cannot use this variable outside the contract 
+
+lastly we have an arrays of Strings where we have all the event stored in our contract.
+
+```
+function setURI(string memory newuri) public onlyOwner {
+        _setURI(newuri);
+        }
+function pause() public onlyOwner {
+        _pause();
+    }
+function unpause() public onlyOwner {
+        _unpause();
+    }
+```
+
+in those function we use the onlyOwner modifier that makes a function revert if not called by the address registered as the owner. Once you deploy this contract only you or someone that you designate can add new members to the list within. That's it, in a nutshell.
+the first function _setURI_ is for set token URI which points to metadata about that specific token.
+the second function  
+
 
 
 
