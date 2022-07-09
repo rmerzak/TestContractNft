@@ -137,7 +137,7 @@ The UUPS proxy pattern is similar to the transparent proxy pattern --A proxy wit
 so this function initialise our contract to be upgradable.
 
 ```solidity
-	mapping(string => uint256) eventBadgeIdStore;
+mapping(string => uint256) eventBadgeIdStore;
     uint256 private badgeIdCounter;
     string[] public eventStore;
 ```
