@@ -56,6 +56,29 @@ define the owner of a contract and do all the administrative tasks on it.
 
 # **TestContract** :
 
+**Environment preparation**  
+Node.js and npm installation:
+```sh
+node -v
+npm -v
+```
+Truffle installation:
+Truffle is a world-class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM).
+
+```sh
+npm install -g truffle
+```
+
+Ganache installation:
+Ganache is a local blockchain network for development purposes. It is convenient to use and it has a friendly interface.
+```sh
+npm install -g cli-truffle
+```
+or
+```sh
+npm install -g truffle
+```
+
 ```solidity
 contract TestContract is
     Initializable,
@@ -79,8 +102,6 @@ function initialize() public initializer {
 ```
 
 this function is an initializer that can 
-
-
 
 
 
