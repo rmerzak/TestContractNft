@@ -1,6 +1,4 @@
 # **solidity**   
-![]({{site.baseurl}}//download.png)
-
 
 ## introduction:
 _everything in Ethereum is just a smart contract_ and the best way to write it is to use Solidity.
@@ -55,6 +53,36 @@ is essential to prevent unauthorized access to critical functions  who is allowe
 
 ownership:  
 define the owner of a contract and do all the administrative tasks on it.  
+
+# **TestContract** :
+
+```solidity
+contract TestContract is
+    Initializable,
+    ERC1155Upgradeable,
+    OwnableUpgradeable,
+    PausableUpgradeable,
+    ERC1155BurnableUpgradeable,
+    ERC1155SupplyUpgradeable,
+    UUPSUpgradeable
+```
+TestContract use all those contract and inherit from them some of there functions in the purpose of securing and writing a good optimized smart contract.
+```solidity
+function initialize() public initializer {
+        __ERC1155_init("");
+        __Ownable_init();
+        __Pausable_init();
+        __ERC1155Burnable_init();
+        __ERC1155Supply_init();
+        __UUPSUpgradeable_init();
+    }
+```
+
+this function is an initializer that can 
+
+
+
+
 
 
 
