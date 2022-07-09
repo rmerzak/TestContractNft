@@ -1,6 +1,7 @@
 # **solidity**   
 
-<img src="./download.png">
+<p align="center"><img src="./download.png"></p>  
+
 ## introduction:
 _everything in Ethereum is just a smart contract_ and the best way to write it is to use Solidity.
 Solidity is a brand new programming language native to Ethereum, the second largest cryptocurrency by market capitalization.
