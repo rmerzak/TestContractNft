@@ -239,7 +239,7 @@ function _beforeTokenTransfer(
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 ```
-**Hooks:***
+**Hooks:**
 Sometimes, in order to extend a parent contract we will need to override multiple related functions, which leads to code duplication and increased likelihood of bugs.
 Hooks are simply functions that are called before or after some action takes place. They provide a centralized point to hook into and extend the original behavior.
 
