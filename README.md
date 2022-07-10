@@ -292,4 +292,4 @@ to deploy this smart contract we need **0.10840382 ETH**
 to optimise the gaz in this smart contract we must find where we have the problem and what are the function that cost alot of gaz and try to minimize them.
 
 
-																						...Continue
+.............................................................................................Continue
